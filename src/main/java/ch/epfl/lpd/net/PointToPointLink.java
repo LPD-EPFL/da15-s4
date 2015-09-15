@@ -4,6 +4,8 @@ package ch.epfl.lpd.net;
 import java.io.*;
 import java.net.*;
 
+import ch.epfl.lpd.NodeInfo;
+
 
 public class PointToPointLink
 {
@@ -13,9 +15,17 @@ public class PointToPointLink
 
 
     public PointToPointLink(String ip, int port) throws Exception {
+        System.out.println("Establishing point-to-point link to " + ip + ":" + port);
         DatagramSocket clientSocket = new DatagramSocket(port);
         receiverIP = InetAddress.getByName(ip);
         receiverPort = port;
+    }
+
+    public PointToPointLink(NodeInfo nInfo) throws Exception {
+        System.out.println("Establishing point-to-point link to " + nInfo.toString());
+        DatagramSocket clientSocket = new DatagramSocket(nInfo.getPort());
+        receiverIP = InetAddress.getByName(nInfo.getIP());
+        receiverPort = nInfo.getPort();
     }
 
     public void sendOnce(String message) throws Exception {
@@ -35,5 +45,9 @@ public class PointToPointLink
     public void shutdownLink() {
         System.out.println("Closing link");
         socket.close();
+    }
+
+    public String toString() {
+        return receiverIP.toString() + ":" + Integer.toString(receiverPort);
     }
 }
