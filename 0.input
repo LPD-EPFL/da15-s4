@@ -1,0 +1,14 @@
+put,AAA,AAA01
+get,AAA
+put,AAA,AAA00
+get,AAA
+
+put,AAA,800
+get,AAA
+
+put,X,X0X
+get,X
+put,Y,Y0X
+get,Y
+put,R,R0X
+get,R

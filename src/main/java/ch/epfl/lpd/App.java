@@ -65,11 +65,6 @@ public class App {
         startSignal.await();
         System.out.println("Got SIGINT. Starting...");
 
-        while(true) {
-            Thread.sleep(1000);
-            System.out.println(".");
-        }
-
         /**
          * TODO: Parse the input file.
          */

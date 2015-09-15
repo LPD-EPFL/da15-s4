@@ -1,1 +1,0 @@
-java -cp target/da15-s4-1.0-SNAPSHOT.jar ch.epfl.lpd.App 127.0.0.1 20000 127.0.0.1 20001 127.0.0.1 20002 2 input

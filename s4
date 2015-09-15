@@ -1,0 +1,3 @@
+#!/bin/sh
+
+java -cp target/da15-s4-1.0-SNAPSHOT.jar ch.epfl.lpd.App "$@"
