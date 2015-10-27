@@ -16,14 +16,14 @@ public class PointToPointLink
 
     public PointToPointLink(String ip, int port) throws Exception {
         System.out.println("Establishing point-to-point link to " + ip + ":" + port);
-        DatagramSocket clientSocket = new DatagramSocket(port);
+        socket = new DatagramSocket(port);
         receiverIP = InetAddress.getByName(ip);
         receiverPort = port;
     }
 
     public PointToPointLink(NodeInfo nInfo) throws Exception {
         System.out.println("Establishing point-to-point link to " + nInfo.toString());
-        DatagramSocket clientSocket = new DatagramSocket(nInfo.getPort());
+        socket = new DatagramSocket(nInfo.getPort());
         receiverIP = InetAddress.getByName(nInfo.getIP());
         receiverPort = nInfo.getPort();
     }
