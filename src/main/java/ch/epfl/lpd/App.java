@@ -84,10 +84,12 @@ public class App {
     private static List<PointToPointLink> establishPTPLinks(List<NodeInfo> nodes, int index) throws Exception {
         List<PointToPointLink> links = new ArrayList<PointToPointLink>();
 
+        int myPort = nodes.get(index).getPort();
+
         for (int i = 0; i < 3; i++) {
             if (i == index)
                 continue;
-            links.add(new PointToPointLink(nodes.get(i)));
+            links.add(new PointToPointLink(nodes.get(i), myPort));
         }
         return links;
     }

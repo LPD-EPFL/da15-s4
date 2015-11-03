@@ -1,7 +1,7 @@
-all: s4
+all: .PHONY
 
-s4:
-	mvn package
+.PHONY:
+	mvn clean ; mvn package
 
 clean:
-	rm s4
+	mvn clean
