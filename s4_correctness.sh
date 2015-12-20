@@ -78,3 +78,7 @@ echo "Correctness test done."
 # Removes all .class files, so that the next make rebuilds them
 #
 make clean
+
+#call script to uninstall dependencies like (required) libraries (keep it empty if no dependencies required)
+if test -f "removal.sh"; then sh removal.sh;fi
+
