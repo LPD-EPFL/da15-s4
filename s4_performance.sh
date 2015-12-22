@@ -2,7 +2,7 @@
 #
 # Tests the performance of S4 application.
 #
-# usage: sh s4_performance.sh
+# usage: source s4_performance.sh
 #
 
 #time to wait for S4 to complete its performance evaluation (in seconds)
