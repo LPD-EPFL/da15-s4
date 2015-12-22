@@ -2,7 +2,7 @@
 #
 # Tests the correctness of S4 application.
 #
-# usage: source s4_correctness.sh
+# usage: source s4_correctness_java.sh
 #
 # This is a sample script that demonstrates the test execution.
 # The details and parameters of the actual test might differ.
